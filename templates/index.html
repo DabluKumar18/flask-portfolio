@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Dablu Kumar | Backend Developer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header class="header">
+
+            <div class="logo">
+                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo">
+                <span>Dablu Kumar</span>
+            </div>
+
+
+            <nav class="nav" id="navMenu">
+                <a href="/">Home</a>
+                <a href="/login">Admin</a>
+                <a href="#about">About</a>
+                <a href="#education">Education</a>
+                <a href="#projects">Projects</a>
+                <a href="#resume">Resume</a>
+                <a href="#certifications">Certifications</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+            <!-- ☰ Hamburger -->
+            <div class="menu-toggle" onclick="toggleMenu()">
+                ☰
+            </div>
+        </header>
+
+        <section class="hero">
+            <div style="margin-bottom: 30px;">
+                <img src="{{ url_for('static', filename='images/image33.jpg') }}" alt="Profile Image" style="
+            width:180px;
+            height:180px;
+            border-radius:50%;
+            object-fit:cover;
+            border:4px solid #00e5ff;
+            box-shadow: 0 0 20px rgba(0,229,255,0.6);
+         ">
+            </div>
+
+            <h1>Hi, I'm <span>Dablu Kumar</span></h1>
+
+            <div class="buttons">
+                <a href="/login" class="btn-primary">Admin Login</a>
+                <a href="https://github.com/Thedablukumar/flask-portfolio" target="_blank" class="btn-outline">
+                    View Project Code
+                </a>
+            </div>
+        </section>
+
+        <section class="about" id="about">
+            <h2>About Me</h2>
+
+            <p>
+                I’m Dablu Kumar, an aspiring Backend Developer and a Computer Science student.
+                I am deeply interested in backend development, web technologies, and building
+                real-world applications using Python and Flask.
+            </p>
+
+            <p>
+                I enjoy turning ideas into functional backend systems and continuously
+                improving my technical foundation. With a strong focus on core computer
+                science concepts, I aim to write clean, scalable, and secure backend code.
+            </p>
+
+            <h3>💻 Technologies & Skills I Work With</h3>
+            <ul>
+                <li><strong>Programming Languages:</strong> Python, C, Java (Basics)</li>
+                <li><strong>Backend Technologies:</strong> Flask, REST APIs</li>
+                <li><strong>Web Technologies:</strong> HTML, CSS, JavaScript, Responsive Design</li>
+                <li><strong>Databases:</strong> MySQL, SQLite</li>
+                <li><strong>Core CS:</strong> Data Structures & Algorithms (Basics)</li>
+                <li><strong>Tools:</strong> Git, GitHub, VS Code, Render</li>
+            </ul>
+
+            <h3>🎯 Career Goals</h3>
+            <ul>
+                <li>Strengthen my backend development and database design skills</li>
+                <li>Build real-world backend and full-stack projects</li>
+                <li>Learn scalable system design and secure application development</li>
+                <li>Grow into a skilled Backend Engineer working on production systems</li>
+            </ul>
+
+            <h3>💡 What I Enjoy Building</h3>
+            <ul>
+                <li>Backend-driven web applications</li>
+                <li>Authentication systems and admin panels</li>
+                <li>Contact forms with database integration</li>
+                <li>Portfolio and utility-based web projects</li>
+                <li>Experimenting with new backend tools and technologies</li>
+            </ul>
+        </section>
+
+        <section class="education" id="education">
+
+            <div class="section-heading">
+                <h2>Education</h2>
+                <p>My academic journey</p>
+            </div>
+
+            <div class="education-container">
+
+                <!-- MCA -->
+                <div class="edu-card">
+                    <h3>Master of Computer Applications (MCA)</h3>
+                    <span class="edu-college">Vivekananda Global University, Jaipur</span>
+                    <span class="edu-year">2025 – Present</span>
+                    <p>
+                        Currently pursuing MCA with a strong focus on backend development,
+                        database management, and scalable web application design using
+                        modern technologies.
+                    </p>
+                </div>
+
+                <!-- BCA -->
+                <div class="edu-card">
+                    <h3>Bachelor of Computer Applications (BCA)</h3>
+                    <span class="edu-college">M.S.S.G College, Areraj</span>
+                    <span class="edu-year">2022 – 2025</span>
+                    <p>
+                        Successfully completed BCA, building a solid foundation in
+                        programming, databases, data structures, and web development.
+                    </p>
+                </div>
+                <!-- 12th -->
+                <div class="edu-card">
+                    <h3>Intermediate (12th)</h3>
+                    <span class="edu-college">BSEB Board Patna</span>
+                    <span class="edu-year">2020 – 2022</span>
+                    <p>
+                        Completed higher secondary education with Computer Science and
+                        Mathematics as core subjects.
+                    </p>
+                </div>
+                <!-- 10th -->
+                <div class="edu-card">
+                    <h3>Matriculation (10th)</h3>
+                    <span class="edu-college">BSEB Board Patna</span>
+                    <span class="edu-year">2019 – 2020</span>
+                    <p>
+                        Built a strong foundation in mathematics, science, and problem-solving.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="skills">
+            <h2>Skills</h2>
+            <div class="skill-box">Python</div>
+            <div class="skill-box">Flask</div>
+            <div class="skill-box">MySql</div>
+            <div class="skill-box">REST API</div>
+            <div class="skill-box">Authentication</div>
+            <div class="skill-box">Deployment (Render)</div>
+        </section>
+
+        <section class="projects" id="projects">
+
+            <div class="section-heading">
+                <h2>Projects</h2>
+                <p>Some of the projects I have built</p>
+            </div>
+
+            <div class="projects-container">
+
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <h3>Portfolio Website</h3>
+                    <p>
+                        A complete backend-driven portfolio website built using Flask,
+                        featuring contact form, admin panel, authentication, and database
+                        integration.
+                    </p>
+
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>Flask</span>
+                        <span>MySQL</span>
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                    </div>
+
+                    <div class="project-links">
+                        <a href="https://github.com/Thedablukumar/flask-portfolio" target="_blank">GitHub</a>
+                        <a href="https://dablu-portfolio.onrender.com" target="_blank">Live Demo</a>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <h3>StyleCart – Online Shopping Web Portal</h3>
+                    <p>
+                        Built user authentication and product management system.
+                        Implemented cart and checkout functionality with payment simulation.
+                        Created admin panel for managing orders and inventory.
+                    </p>
+
+                    <div class="project-tech">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                        <span>Python(Flask)</span>
+                        <span>MySQL</span>
+                    </div>
+
+                    <div class="project-links">
+                        <a href="https://github.com/Thedablukumar" target="_blank">GitHub</a>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <h3>Science Study Center – Admission Management Portal</h3>
+                    <p>
+                        Developed online student registration and secure admin login.
+                        Displayed real-time admission data with responsive design.
+                    </p>
+
+                    <div class="project-tech">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                        <span>Python(Flask)</span>
+                    </div>
+
+                    <div class="project-links">
+                        <a href="https://github.com/Thedablukumar" target="_blank">GitHub</a>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="resume" id="resume">
+            <h2>Resume</h2>
+            <span>Check out my resume to see my full professional background, education, and skills.</span>
+            <div class="resume-btn">
+                <a href="{{ url_for('static', filename='resume/Dablu_Kumar_Resume.pdf') }}" download class="btn-resume">
+                    📄 Download Resume
+                </a>
+                <a href="{{ url_for('static', filename='resume/Dablu_Kumar_Resume.pdf') }}" target="_blank"
+                    class="btn-resume">
+                    📄 View Resume
+                </a>
+
+            </div>
+        </section>
+
+        <!----------- Certifications  ------------------>
+
+        <section class="certifications" id="certifications">
+
+            <h2 class="section-title">Certifications</h2>
+
+            <!-- 🔹 Certificate 1 -->
+            <div class="certificate-card">
+
+                <div class="cert-logo">
+                    <img src="{{ url_for('static', filename='images/exin_logo.jpg') }}" alt="EXIN">
+                </div>
+
+                <div class="cert-content">
+                    <h3>EXIN Cloud Computing Foundation</h3>
+                    <p class="issuer">EXIN</p>
+                    <p class="date">Issued: Dec 2025</p>
+                    <p class="cred-id">Credential ID: 6667573.20905680</p>
+
+                    <a href="{{ url_for('static', filename='certificates/exin-cloud.pdf') }}" target="_blank"
+                        class="credential-btn">
+                        Show Credential
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- 🔹 Certificate 2 -->
+            <div class="certificate-card">
+
+                <div class="cert-logo">
+                    <img src="{{ url_for('static', filename='images/rajasthan-digifest-hackathon.jpg') }}"
+                        alt="Hackathon Certificate">
+                </div>
+
+                <div class="cert-content">
+                    <h3>Rajasthan Digifest × TiE Global Hackathon
+                        Participation Certificate</h3>
+                    <p class="issuer">Issued by DoIT&C Rajasthan | TiE Global - Jaipur</p>
+                    <p class="date">Issued: Dec 2025</p>
+
+                    <a href="{{ url_for('static', filename='certificates/rajasthan-digifest-hackathon.pdf') }}"
+                        target="_blank" class="credential-btn">
+                        Show Credential
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- Certificates3 -->
+            <div class="certificate-card">
+
+                <div class="cert-logo">
+                    <img src="{{ url_for('static', filename='images/accenture-ai-fundamentals.jpg') }}"
+                        alt="AI Fundamentals">
+                </div>
+
+                <div class="cert-content">
+                    <h3>AI Fundamentals of AI – Accenture</h3>
+                    <p class="issuer">Accenture</p>
+                    <p class="date">Issued: 07/11/2025</p>
+                    <p class="cred-id">Certificate ID: FSP/2025/11/0802356</p>
+
+                    <a href="{{ url_for('static', filename='certificates/accenture-ai-fundamentals.pdf') }}"
+                        target="_blank" class="credential-btn">
+                        Show Credential
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- Certificates4 -->
+            <div class="certificate-card">
+
+                <div class="cert-logo">
+                    <img src="{{ url_for('static', filename='images/future-skills.png') }}" alt="AI Fundamentals">
+                </div>
+
+                <div class="cert-content">
+                    <h3>Generative AI Literacy</h3>
+                    <p class="issuer">FutureSkills Prime – NASSCOM</p>
+                    <p class="date">Issued: 18/02/2026</p>
+                    <p class="cred-id">Certificate ID: 26180261591 </p>
+
+                    <a href="{{ url_for('static', filename='certificates/future-skills-fundation.pdf') }}"
+                        target="_blank" class="credential-btn">
+                        Show Credential
+                    </a>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Gallery Section -->
+        <section class="gallery" id="gallery">
+
+            <div class="gallery-header">
+                <h2>My Gallery</h2>
+                <span class="underline"></span>
+                <p>A Collection of moments and memories</p>
+            </div>
+
+            <div class="gallery-grid">
+
+                <div class="gallery-card">
+                    <img src="{{ url_for('static', filename='gallery/hackathon.jpeg') }}">
+                    <div class="gallery-overlay">
+                        <span>Rajasthan Digifest Hackathon</span>
+                    </div>
+                </div>
+
+                <div class="gallery-card">
+                    <img src="{{ url_for('static', filename='gallery/group-photo.jpg') }}">
+                    <div class="gallery-overlay">
+                        <span>AI & ML Workshop</span>
+                    </div>
+                </div>
+
+                <div class="gallery-card">
+                    <img src="{{ url_for('static', filename='gallery/classroom.jpeg') }}">
+                    <div class="gallery-overlay">
+                        <span>College Campus</span>
+                    </div>
+                </div>
+
+                <div class="gallery-card">
+                    <img src="{{ url_for('static', filename='gallery/group-photo.jpg') }}">
+                    <div class="gallery-overlay">
+                        <span>Team Collaboration</span>
+                    </div>
+                </div>
+
+                <div class="gallery-card">
+                    <img src="{{ url_for('static', filename='gallery/college-event.jpeg') }}">
+                    <div class="gallery-overlay">
+                        <span>University Event</span>
+                    </div>
+                </div>
+
+                <div class="gallery-card">
+                    <img src="{{ url_for('static', filename='gallery/Hackathon2.jpeg') }}">
+                    <div class="gallery-overlay">
+                        <span>Problem Solving Session</span>
+                    </div>
+                </div>
+
+                <div class="gallery-card">
+                    <img src="{{ url_for('static', filename='gallery/Hackathon2.jpeg') }}">
+                    <div class="gallery-overlay">
+                        <span>Problem Solving Session</span>
+                    </div>
+                </div>
+
+                <div class="gallery-card">
+                    <img src="{{ url_for('static', filename='gallery/Hackathon2.jpeg') }}">
+                    <div class="gallery-overlay">
+                        <span>Problem Solving Session</span>
+                    </div>
+                </div>
+
+                <div class="gallery-card">
+                    <img src="{{ url_for('static', filename='gallery/Hackathon2.jpeg') }}">
+                    <div class="gallery-overlay">
+                        <span>Problem Solving Session</span>
+                    </div>
+                </div>
+
+                <div class="gallery-card">
+                    <img src="{{ url_for('static', filename='gallery/Hackathon2.jpeg') }}">
+                    <div class="gallery-overlay">
+                        <span>Problem Solving Session</span>
+                    </div>
+                </div>
+
+                <div class="gallery-card">
+                    <img src="{{ url_for('static', filename='gallery/Hackathon2.jpeg') }}">
+                    <div class="gallery-overlay">
+                        <span>Problem Solving Session</span>
+                    </div>
+                </div>
+
+                <div class="gallery-card">
+                    <img src="{{ url_for('static', filename='gallery/Hackathon2.jpeg') }}">
+                    <div class="gallery-overlay">
+                        <span>Problem Solving Session</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="contact" id="contact">
+            <!-- 🔷 Center Heading -->
+            <div class="contact-heading">
+                <h2>Contact Us</h2>
+                <p>Let’s connect and build something great together</p>
+            </div>
+
+            <!-- 🔷 Two Column Layout -->
+            <div class="contact-wrapper">
+
+                <!-- LEFT -->
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <p>
+                        I'm always open to discussing new projects, creative ideas,
+                        or opportunities to be part of your vision.
+                    </p>
+
+                    <div class="contact-item">
+                        <img src="https://img.icons8.com/fluency/48/new-post.png">
+                        <a href="mailto:dablukr175@gmail.com">
+                            dablukr175@gmail.com
+                        </a>
+                    </div>
+
+
+                    <div class="contact-item">
+                        <img src="https://img.icons8.com/fluency/48/phone.png">
+                        <a href="https://wa.me/919006749311" target="_blank">
+                            +91 9006749311
+                        </a>
+
+                    </div>
+
+                    <div class="social-links">
+                        <a href="https://github.com/Thedablukumar" target="_blank">
+                            <img src="https://img.icons8.com/fluency/48/github.png">
+                        </a>
+                        <a href="https://www.linkedin.com/in/dablu-kumar-ab7598276/" target="_blank">
+                            <img src="https://img.icons8.com/fluency/48/linkedin.png">
+                        </a>
+                        <a href="https://www.fiverr.com/thedablukumar" target="_blank">
+                            <img src="https://img.icons8.com/fluency/48/fiverr.png" alt="Fiverr Icon">
+                        </a>
+                        <a href="https://www.instagram.com/itzsumitsharmaa" target="_blank">
+                            <img src="https://img.icons8.com/fluency/48/instagram.png" alt="Instagram Icon">
+                        </a>
+                    </div>
+                </div>
+
+                <!-- RIGHT -->
+                <form id="contactForm" onsubmit="event.preventDefault(); submitContactForm();">
+                    <input type="text" id="name" placeholder="Your Name" required>
+                    <input type="email" id="email" placeholder="Your Email" required>
+                    <input type="text" id="phone" placeholder="Phone Number" required>
+                    <textarea id="message" placeholder="Your Message" required></textarea>
+
+                    <!-- ✅ FIXED BUTTON -->
+                    <button type="submit" id="sendBtn">
+                        <span id="btnText">Send Message</span>
+                        <span id="spinner" class="spinner"></span>
+                    </button>
+
+                    <!-- ✅ SUCCESS / ERROR MESSAGE -->
+                    <div id="successMsg" class="success-msg"></div>
+                </form>
+
+            </div>
+        </section>
+
+        <footer>
+            © 2026 Dablu Kumar | Built with Flask & MySQL
+        </footer>
+
+    </div>
+    <script src="{{ url_for('static', filename='js/contact.js') }}"></script>
+
+    <div id="lightbox">
+        <span id="closeBtn">✖</span>
+        <span id="prevBtn">❮</span>
+        <img id="lightboxImg">
+        <span id="nextBtn">❯</span>
+    </div>
+
+</body>
+
+</html>

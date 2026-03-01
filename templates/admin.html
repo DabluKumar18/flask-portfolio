@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Admin Panel - Messages</title>
+
+<style>
+body{
+    font-family: "Segoe UI", sans-serif;
+    background: linear-gradient(135deg,#020617,#0f1724);
+    color:#e5e7eb;
+    padding:40px;
+}
+
+/* HEADER */
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:25px;
+}
+
+.header h1{
+    color:#00e5ff;
+    font-size:28px;
+}
+
+.logout{
+    text-decoration:none;
+    color:#00e5ff;
+    font-weight:bold;
+}
+
+/* CARD */
+.card{
+    background:rgba(255,255,255,0.05);
+    backdrop-filter: blur(10px);
+    border-radius:16px;
+    padding:20px;
+    box-shadow:0 10px 40px rgba(0,0,0,0.5);
+    overflow-x:auto;
+}
+
+/* TABLE */
+table{
+    width:100%;
+    border-collapse:collapse;
+    min-width:700px;
+}
+
+th{
+    background:rgba(0,229,255,0.15);
+    color:#00e5ff;
+    padding:14px;
+    text-align:left;
+}
+
+td{
+    padding:14px;
+    border-bottom:1px solid rgba(255,255,255,0.1);
+    vertical-align:top;
+}
+
+tr:hover{
+    background:rgba(255,255,255,0.05);
+}
+
+/* MESSAGE */
+.message{
+    max-width:350px;
+    line-height:1.4;
+    color:#d1d5db;
+}
+
+/* DELETE BUTTON */
+.delete-btn{
+    color:#ff6b6b;
+    font-weight:bold;
+    text-decoration:none;
+    transition:0.2s;
+}
+
+.delete-btn:hover{
+    color:#ff2e2e;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+    body{
+        padding:20px;
+    }
+    .header{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:10px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+    <h1>📩 Contact Messages</h1>
+    <a href="/logout" class="logout">Logout</a>
+</div>
+
+<div class="card">
+<table>
+<thead>
+<tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Phone No</th>
+    <th>Message</th>
+    <th>Action</th>
+</tr>
+</thead>
+
+<tbody id="data"></tbody>
+</table>
+</div>
+<script src="/static/js/admin.js"></script>
+</body>
+</html>
